@@ -60,36 +60,45 @@ class _HomeDate2State extends State<HomeDate2> {
             Expanded(
               flex: 1,
               child: Center(
-                child: Text(
-                  daysList[0],
-                  style: const TextStyle(
-                      color: kTextColor,
-                      fontFamily: "Nunito-Bold",
-                      fontWeight: FontWeight.w300),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text(
+                    daysList[0],
+                    style: const TextStyle(
+                        color: kTextColor,
+                        fontFamily: "Nunito-Bold",
+                        fontWeight: FontWeight.w300),
+                  ),
                 ),
               ),
             ),
             Expanded(
               flex: 5,
               child: Center(
-                child: Text(
-                  daysList[1],
-                  style: const TextStyle(
-                      color: kTextColor,
-                      fontFamily: "Nunito-Bold",
-                      fontWeight: FontWeight.w700),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text(
+                    daysList[1],
+                    style: const TextStyle(
+                        color: kTextColor,
+                        fontFamily: "Nunito-Bold",
+                        fontWeight: FontWeight.w700),
+                  ),
                 ),
               ),
             ),
             Expanded(
               flex: 1,
               child: Center(
-                child: Text(
-                  daysList[2],
-                  style: const TextStyle(
-                      color: kTextColor,
-                      fontFamily: "Nunito-Bold",
-                      fontWeight: FontWeight.w300),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text(
+                    daysList[2],
+                    style: const TextStyle(
+                        color: kTextColor,
+                        fontFamily: "Nunito-Bold",
+                        fontWeight: FontWeight.w300),
+                  ),
                 ),
               ),
             ),

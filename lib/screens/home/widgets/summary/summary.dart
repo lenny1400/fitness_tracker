@@ -14,7 +14,7 @@ class _HomeSummaryState extends State<HomeSummary> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width * 0.9;
-    final height = MediaQuery.of(context).size.height * 0.25;
+    final height = MediaQuery.of(context).size.height * 0.27;
 
     return Column(
       children: [

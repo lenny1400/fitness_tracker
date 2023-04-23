@@ -25,8 +25,8 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                 children: [
                   const Expanded(
                     flex: 3,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 5),
+                    child: FittedBox(
+                      fit: BoxFit.fitHeight,
                       child: Text(
                         "Carbs",
                         style: TextStyle(color: kTextColor),
@@ -34,9 +34,9 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 2, bottom: 2),
+                      padding: const EdgeInsets.only(top: 4,bottom: 4),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         // Set the border radius here
@@ -51,12 +51,12 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                     ),
                   ),
                   const Expanded(
-                      flex: 3,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 5),
+                      flex: 2,
+                      child: FittedBox(
+                        fit: BoxFit.fitHeight,
                         child: Text(
                           "60/180g",
-                          style: TextStyle(fontSize: 12, color: kTextColor),
+                          style: TextStyle(color: kTextColor),
                         ),
                       )),
                 ],
@@ -72,8 +72,8 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                 children: [
                   const Expanded(
                     flex: 3,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 5),
+                    child: FittedBox(
+                      fit: BoxFit.fitHeight,
                       child: Text(
                         "Protein",
                         style: TextStyle(color: kTextColor),
@@ -81,29 +81,29 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 2, bottom: 2),
+                      padding: const EdgeInsets.only(top: 4,bottom: 4),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         // Set the border radius here
                         child: LinearProgressIndicator(
-                          value: 0.5,
+                          value: 0.33,
                           // Replace with your loading progress value
                           backgroundColor: Colors.grey[300],
                           valueColor:
-                              const AlwaysStoppedAnimation<Color>(Colors.blue),
+                          const AlwaysStoppedAnimation<Color>(Colors.blue),
                         ),
                       ),
                     ),
                   ),
                   const Expanded(
-                      flex: 3,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 5),
+                      flex: 2,
+                      child: FittedBox(
+                        fit: BoxFit.fitHeight,
                         child: Text(
-                          "100/200g",
-                          style: TextStyle(fontSize: 12, color: kTextColor),
+                          "60/180g",
+                          style: TextStyle(color: kTextColor),
                         ),
                       )),
                 ],
@@ -119,8 +119,8 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                 children: [
                   const Expanded(
                     flex: 3,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 5),
+                    child: FittedBox(
+                      fit: BoxFit.fitHeight,
                       child: Text(
                         "Fats",
                         style: TextStyle(color: kTextColor),
@@ -128,29 +128,29 @@ class _SummaryMacrosState extends State<SummaryMacros> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 2, bottom: 2),
+                      padding: const EdgeInsets.only(top: 4,bottom: 4),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         // Set the border radius here
                         child: LinearProgressIndicator(
-                          value: 0.25,
+                          value: 0.33,
                           // Replace with your loading progress value
                           backgroundColor: Colors.grey[300],
                           valueColor:
-                              const AlwaysStoppedAnimation<Color>(Colors.blue),
+                          const AlwaysStoppedAnimation<Color>(Colors.blue),
                         ),
                       ),
                     ),
                   ),
                   const Expanded(
-                      flex: 3,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 5),
+                      flex: 2,
+                      child: FittedBox(
+                        fit: BoxFit.fitHeight,
                         child: Text(
-                          "20/80g",
-                          style: TextStyle(fontSize: 12, color: kTextColor),
+                          "60/180g",
+                          style: TextStyle(color: kTextColor),
                         ),
                       )),
                 ],

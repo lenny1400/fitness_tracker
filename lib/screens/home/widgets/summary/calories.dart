@@ -12,87 +12,118 @@ class SummaryCalories extends StatefulWidget {
 class _SummaryCaloriesState extends State<SummaryCalories> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            flex: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(bottom: 5),
-                  child: Text(
-                    "1130",
-                    style: TextStyle(
-                        color: kTextColor,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: "Nunito-Bold"),
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints){
+        final availableHeight = constraints.maxHeight;
+        return Padding(
+          padding: const EdgeInsets.all(0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Padding(
+                  padding: const EdgeInsets.all(30),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Expanded(
+                        flex: 1,
+                        child: FittedBox(
+                          fit: BoxFit.fitHeight,
+                          child: Text(
+                            "1130",
+                            style: TextStyle(
+                                color: kTextColor,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: "Nunito-Bold"),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 5),
+                          child: FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: Text(
+                              "eaten",
+                              style: TextStyle(
+                                  color: kTextColor,
+                                  fontWeight: FontWeight.w300,
+                                  fontFamily: "Nunito-Bold"),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
-                Text(
-                  "eaten",
-                  style: TextStyle(
-                      color: kTextColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "Nunito-Bold"),
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: CircularPercentIndicator(
-              radius: 45,
-              lineWidth: 6,
-              backgroundColor: Colors.white,
-              startAngle: 270,
-              percent: 0.34,
-              center: const Text(
-                "2000\nremaining",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 12,
-                    fontFamily: "Nunito-ExtraBold",
-                    fontWeight: FontWeight.w500,
-                    color: kTextColor),
               ),
-              progressColor: Colors.blue,
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(bottom: 5),
-                  child: Text(
-                    "130",
+              Expanded(
+                flex: 1,
+                child: CircularPercentIndicator(
+                  radius: availableHeight/2.5,
+                  lineWidth: 5,
+                  backgroundColor: Colors.white,
+                  startAngle: 270,
+                  percent: 0.5,
+                  center: const Text(
+                    "2000\nremaining",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: kTextColor,
-                        fontSize: 24,
+                        fontSize: 11,
+                        fontFamily: "Nunito-ExtraBold",
                         fontWeight: FontWeight.w500,
-                        fontFamily: "Nunito-Bold"),
+                        color: kTextColor),
+                  ),
+                  progressColor: Colors.blue,
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Padding(
+                  padding: const EdgeInsets.all(30),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Expanded(
+                        flex: 1,
+                        child: FittedBox(
+                          fit: BoxFit.fitHeight,
+                          child: Text(
+                            "130",
+                            style: TextStyle(
+                                color: kTextColor,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: "Nunito-Bold"),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 5),
+                          child: FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: Text(
+                              "burned",
+                              style: TextStyle(
+                                  color: kTextColor,
+                                  fontWeight: FontWeight.w300,
+                                  fontFamily: "Nunito-Bold"),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
-                Text(
-                  "burned",
-                  style: TextStyle(
-                      color: kTextColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "Nunito-Bold"),
-                )
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
-      ),
+        );
+      }
     );
   }
 }

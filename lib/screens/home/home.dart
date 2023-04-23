@@ -1,5 +1,6 @@
 import 'package:fitness_tracker/screens/home/widgets/date_widgets/date_widget2.dart';
 import 'package:fitness_tracker/screens/home/widgets/header_widget/welcome.dart';
+import 'package:fitness_tracker/screens/home/widgets/nutrition/nutrition.dart';
 import 'package:fitness_tracker/screens/home/widgets/summary/summary.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -31,6 +32,7 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 15,
               ),
+              Nutrition(),
             ],
           ),
         ));
