@@ -1,3 +1,4 @@
+import 'package:fitness_tracker/constants.dart';
 import 'package:fitness_tracker/screens/home/home.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -16,7 +17,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
-      home: Home(),
+      home: CupertinoPageScaffold(
+        backgroundColor: kBackground,
+        child: Home(),
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
