@@ -38,6 +38,7 @@ dependencies:
   google_fonts:
   intl:
   percent_indicator:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:

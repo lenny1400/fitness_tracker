@@ -19,7 +19,7 @@ class _SummaryMacrosState extends State<SummaryMacros> {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -66,7 +66,7 @@ class _SummaryMacrosState extends State<SummaryMacros> {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -113,7 +113,7 @@ class _SummaryMacrosState extends State<SummaryMacros> {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

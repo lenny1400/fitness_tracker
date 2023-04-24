@@ -23,7 +23,7 @@ class _SummaryCaloriesState extends State<SummaryCalories> {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
@@ -68,14 +68,16 @@ class _SummaryCaloriesState extends State<SummaryCalories> {
                   backgroundColor: Colors.white,
                   startAngle: 270,
                   percent: 0.5,
-                  center: const Text(
-                    "2000\nremaining",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 11,
-                        fontFamily: "Nunito-ExtraBold",
-                        fontWeight: FontWeight.w500,
-                        color: kTextColor),
+                  center: const FittedBox(
+                    fit: BoxFit.fitHeight,
+                    child: Text(
+                      "2000\nremaining",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: "Nunito-ExtraBold",
+                          fontWeight: FontWeight.w500,
+                          color: kTextColor),
+                    ),
                   ),
                   progressColor: Colors.blue,
                 ),
@@ -83,7 +85,7 @@ class _SummaryCaloriesState extends State<SummaryCalories> {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
